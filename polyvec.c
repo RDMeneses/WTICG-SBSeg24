@@ -4,15 +4,18 @@
 #include "poly.h"
 
 /*************************************************
-* Name:        expand_mat
+* Name:        polyvec_matrix_expand_and_multiply
 *
-* Description: Implementation of ExpandA. Generates matrix A with uniformly
-*              random coefficients a_{i,j} by performing rejection
-*              sampling on the output stream of SHAKE128(rho|j|i)
-*              or AES256CTR(rho,j|i).
+* Description: Implementation of ExpandA and multiplication with an input vector. 
+*              Generates matrix A with uniformly random coefficients a_{i,j}
+*              by performing rejection sampling on the output stream of 
+*               SHAKE128(rho|j|i) or AES256CTR(rho,j|i).
 *
 * Arguments:   - polyvecl mat[K]: output matrix
 *              - const uint8_t rho[]: byte array containing seed rho
+               - polyvecl *p: pointer to struct in with each line of 
+                the matrix is generated and stored.
+               - polyvecl *v: pointer to input vector.
 **************************************************/
 
 void polyvec_matrix_expand_and_multiply(polyveck *t, const uint8_t rho[SEEDBYTES], polyvecl *p, const polyvecl *v) {
@@ -25,21 +28,6 @@ void polyvec_matrix_expand_and_multiply(polyveck *t, const uint8_t rho[SEEDBYTES
     polyvecl_pointwise_acc_montgomery(&t->vec[i], p, v);
   }
 }
-
-/*void polyvec_matrix_expand(polyvecl mat[K], const uint8_t rho[SEEDBYTES]) {
-  unsigned int i, j;
-
-  for(i = 0; i < K; ++i)
-    for(j = 0; j < L; ++j)
-      poly_uniform(&mat[i].vec[j], rho, (i << 8) + j);
-}
-
-void polyvec_matrix_pointwise_montgomery(polyveck *t, const polyvecl mat[K], const polyvecl *v) {
-  unsigned int i;
-
-  for(i = 0; i < K; ++i)
-    polyvecl_pointwise_acc_montgomery(&t->vec[i], &mat[i], v);
-}*/
 
 /**************************************************************/
 /************ Vectors of polynomials of length L **************/
