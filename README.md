@@ -1,0 +1,1 @@
+This repository is associated with the research project submited to the "Workshop de Trabalhos de Iniciação Científica e Graduação" (WTICG) do "XXIV Simpósio Brasileiro em Segurança da Informação e de Sistemas Computacionais (SBSeg 2024).
