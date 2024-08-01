@@ -1,6 +1,6 @@
 ## Introduction
 
-This repository is associated with the research project submited to the "Workshop de Trabalhos de Iniciação Científica e Graduação" (WTICG) of the "XXIV Simpósio Brasileiro em Segurança da Informação e de Sistemas Computacionais (SBSeg 2024).
+This repository is associated with the research project submitted to the "Workshop de Trabalhos de Iniciação Científica e Graduação" (WTICG) of the "XXIV Simpósio Brasileiro em Segurança da Informação e de Sistemas Computacionais (SBSeg 2024).
 
 **Project Title:** Compact Memory Implementations of the ML-DSA Post-Quantum Digital Signature Algorithm
 
