@@ -21,6 +21,11 @@ To compile the test programs in Linux or macOS, go to `ML-DSA-v/` or `ML-DSA-p/`
 
 ```
 make clean all
+```
+
+Then, run the commands:
+
+```
 make && make speed
 ```
 Which will generate the executables:
