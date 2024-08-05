@@ -17,7 +17,7 @@ This repository presents two implementations of the ML-DSA post-quantum digital 
 1. ML-DSA-v: vector-by-vector generation
 2. ML-DSA-p: polynomial-by-polynomial generation
 
-To compile the test programs in Linux or macOS, go to `ML-DSA-v/` or `ML-DSA-p/` and run:
+To compile the test programs in Linux or macOS, go to `ML-DSA-v/` or `ML-DSA-p/` and run the commands:
 
 ```
 make clean all
