@@ -20,6 +20,7 @@ This repository presents two implementations of the ML-DSA post-quantum digital 
 To compile the test programs in Linux or macOS, go to `ML-DSA-v/` or `ML-DSA-p/` and run:
 
 ```
+make clean all
 make && make speed
 ```
 Which will generate the executables:
